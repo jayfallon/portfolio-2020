@@ -1,7 +1,26 @@
-import '../styles/globals.css'
+import App, { Container } from "next/app";
+import Page from "components/Page";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return { pageProps };
+  }
+
+  render() {
+    const { Component, pageProps, router } = this.props;
+
+    return (
+      <React.Fragment>
+        <Page>
+          <Component {...pageProps} router={router} />
+        </Page>
+      </React.Fragment>
+    );
+  }
 }
-
-export default MyApp

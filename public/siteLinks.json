@@ -1,0 +1,58 @@
+{
+  "website": [
+    {
+      "href": "/",
+      "text": "home"
+    },
+    {
+      "href": "/about",
+      "text": "about"
+    },
+    {
+      "href": "/work",
+      "text": "work"
+    },
+    {
+      "href": "/experience",
+      "text": "experience"
+    },
+    {
+      "href": "/projects",
+      "text": "projects"
+    }
+  ],
+  "social": [
+    {
+      "href": "https://www.linkedin.com/in/jayfallon/",
+      "target": "_blank",
+      "rel": "noopener",
+      "text": "LinkedIn"
+    },
+    {
+      "href": "https://github.com/jayfallon",
+      "target": "_blank",
+      "rel": "noopener",
+      "text": "GitHub"
+    },
+    {
+      "href": "https://medium.com/@jayfallon",
+      "target": "_blank",
+      "rel": "noopener",
+      "text": "Medium"
+    },
+    {
+      "href": "https://www.instagram.com/jayfallon/",
+      "target": "_blank",
+      "rel": "noopener",
+      "text": "Instagram"
+    }
+  ],
+  "resume": [
+    {
+      "href": "https://jayfallon-portfolio-2020.s3.amazonaws.com/jayfallon-resume-2020.pdf",
+      "text": "PDF Resume Download",
+      "rel": "noopener noreferrer",
+      "target": "_blank"
+    }
+  ]
+}
