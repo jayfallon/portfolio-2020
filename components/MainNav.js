@@ -8,21 +8,18 @@ const NavStyles = styled.nav`
   }
 `;
 
-import links from "../public/routes.json";
-
-export default function MainNav({ navigations }) {
+export default function MainNav({ navigation }) {
   const router = useRouter();
-  console.log(navigations, "navvies");
+  console.log(router);
   return (
     <NavStyles>
-      Nav goes here
       <ul>
-        {links.website.map((link, idx) => {
+        {navigation.map((nav) => {
           return (
-            <li key={idx}>
-              <Link href={link.href}>
-                <a className={router.pathname === link.href ? "active" : ""}>
-                  {link.text}
+            <li key={nav.id}>
+              <Link href={nav.slug}>
+                <a className={router.pathname === nav.slug ? "active" : ""}>
+                  {nav.title}
                 </a>
               </Link>
             </li>

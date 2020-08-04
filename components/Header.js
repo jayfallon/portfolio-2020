@@ -17,10 +17,10 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-export default function Header() {
+export default function Header({ navigation }) {
   return (
     <header>
-      <MainNav />
+      <MainNav navigation={navigation} />
     </header>
   );
 }
