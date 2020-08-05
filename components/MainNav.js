@@ -10,7 +10,7 @@ const NavStyles = styled.nav`
 
 export default function MainNav({ navigation }) {
   const router = useRouter();
-  console.log(router);
+  // console.log(router);
   return (
     <NavStyles>
       <ul>
