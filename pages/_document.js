@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import Meta from "../components/Meta";
+import Meta from "components/Meta";
 
 export const title = "Jay Fallon - Strategy, Design & Development - v2020";
 const description =

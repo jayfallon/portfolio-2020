@@ -1,8 +1,18 @@
 import getConfig from "next/config";
+import { NextSeo } from "next-seo";
 
 export default function Movie({ movie }) {
+  const SEO = {
+    title: `Jay Fallon's movies | ${movie.title}`,
+    description: movie.description,
+    openGraph: {
+      title: `Jay Fallon's movies | ${movie.title}`,
+      description: movie.description,
+    },
+  };
   return (
     <>
+      <NextSeo {...SEO} />
       <h2>{movie.title}</h2>
       <p dangerouslySetInnerHTML={{ __html: movie.description }} />
     </>
