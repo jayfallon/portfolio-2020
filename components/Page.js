@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import UseTheme from "./UseTheme";
 import { DefaultSeo } from "next-seo";
+import ContextWrapper from "components/ContextWrapper";
 
 import SEO from "../next-seo.config";
 
@@ -29,7 +30,9 @@ const Page = (props) => {
           <a href="#mainContent" className="content--skip">
             Skip to Content
           </a>
-          <Header navigation={props.navigation} />
+          <ContextWrapper navigation={props.navigation}>
+            <Header />
+          </ContextWrapper>
           {props.children}
           <Footer />
         </StyledPage>

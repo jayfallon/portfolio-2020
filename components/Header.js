@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import NProgress from "nprogress";
 
+import ToggleNavigationColorButton from "./ToggleNavigationColorButton";
+
 import Link from "next/link";
 import Router from "next/router";
 
@@ -17,10 +19,11 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-export default function Header({ navigation }) {
+export default function Header() {
   return (
     <header>
-      <MainNav navigation={navigation} />
+      <ToggleNavigationColorButton />
+      <MainNav />
     </header>
   );
 }

@@ -1,20 +1,29 @@
+import { useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
+import HeaderContext from "context/HeaderContext";
+
 const NavStyles = styled.nav`
+  a {
+    background: ${(props) => (props.color ? "yellow" : "black")};
+    color: ${(props) => (props.color ? "black" : "yellow")};
+  }
   a.active {
-    background: pink;
+    background: ${(props) => (props.color ? "black" : "yellow")};
+    color: ${(props) => (props.color ? "white" : "black")};
   }
 `;
 
-export default function MainNav({ navigation }) {
+export default function MainNav() {
   const router = useRouter();
   // console.log(router);
+  const { menuItems, color } = useContext(HeaderContext);
   return (
-    <NavStyles>
+    <NavStyles color={color}>
       <ul>
-        {navigation.map((nav) => {
+        {menuItems.map((nav) => {
           return (
             <li key={nav.id}>
               <Link href={nav.slug}>
