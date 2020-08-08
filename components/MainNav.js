@@ -19,11 +19,12 @@ const NavStyles = styled.nav`
 export default function MainNav() {
   const router = useRouter();
   // console.log(router);
-  const { menuItems, color } = useContext(HeaderContext);
+  // const { menuItems, color } = useContext(HeaderContext);
   return (
-    <NavStyles color={color}>
+    <NavStyles>
       <ul>
-        {menuItems.map((nav) => {
+        <li>links</li>
+        {/* {menuItems.map((nav) => {
           return (
             <li key={nav.id}>
               <Link href={nav.slug}>
@@ -33,7 +34,7 @@ export default function MainNav() {
               </Link>
             </li>
           );
-        })}
+        })} */}
       </ul>
     </NavStyles>
   );

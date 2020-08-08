@@ -30,9 +30,7 @@ const Page = (props) => {
           <a href="#mainContent" className="content--skip">
             Skip to Content
           </a>
-          <ContextWrapper navigation={props.navigation}>
-            <Header />
-          </ContextWrapper>
+          <Header />
           {props.children}
           <Footer />
         </StyledPage>

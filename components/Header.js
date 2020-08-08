@@ -22,7 +22,7 @@ Router.onRouteChangeError = () => {
 export default function Header() {
   return (
     <header>
-      <ToggleNavigationColorButton />
+      {/* <ToggleNavigationColorButton /> */}
       <MainNav />
     </header>
   );

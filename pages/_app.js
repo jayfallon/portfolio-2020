@@ -10,19 +10,19 @@ export default class MyApp extends App {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    const { publicRuntimeConfig } = getConfig();
+    // const { publicRuntimeConfig } = getConfig();
 
-    const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`);
-    const navigation = await res.json();
+    // const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`);
+    // const navigation = await res.json();
 
-    return { pageProps, navigation };
+    return { pageProps };
   }
 
   render() {
-    const { Component, pageProps, router, navigation } = this.props;
+    const { Component, pageProps, router } = this.props;
     return (
       <React.Fragment>
-        <Page navigation={navigation}>
+        <Page>
           <Component {...pageProps} router={router} />
         </Page>
       </React.Fragment>
